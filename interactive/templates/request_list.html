@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+
+
+{% block title %} Requests Page {% endblock %}
+
+{% block content %}
+<div class="main-content container">
+
+    <div class="page-content">
+        <div class="container-fluid">
+
+            <!-- start page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                        <h4 class="mb-sm-0 font-size-18">Requests List</h4>
+
+                    </div>
+                </div>
+            </div>
+            <!-- end page title -->
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table align-middle table-nowrap table-hover">
+                                    <thead class="table-light">
+                                    <tr>
+                                        <th scope="col" style="width: 70px;">#</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Phone</th>
+                                        <th scope="col">Subject</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for sd in send_data %}
+                                    {% if sd.leader.leader.username == request.user.username %}
+
+                                    <tr>
+                                        <td>
+                                            <div>
+                                                <img class="rounded-circle avatar-xs"
+                                                     src="{{ sd.user.picture.url }}" alt="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <h5 class="font-size-14 mb-1"><a href="javascript: void(0);"
+                                                                             class="text-dark">{{ sd.full_name }}</a></h5>
+                                        </td>
+                                        <td>{{ sd.email }}</td>
+                                        <td>{{ sd.phone }}</td>
+                                        <td>{{ sd.subject }}</td>
+                                        <td>
+                                            {{ sd.created_at | date}}
+                                        </td>
+                                        <td>
+                                            <ul class="list-inline font-size-20 contact-links mb-0">
+                                                <li class="list-inline-item px-2">
+                                                    <a href="{% url 'request_answer_detail' sd.num %}" title="Message"><i
+                                                            class="bx bx-message-square-dots"></i></a>
+                                                </li>
+                                                <li class="list-inline-item px-2">
+                                                    <a href="javascript: void(0);" title="Profile"><i
+                                                            class="bx bx-user-circle"></i></a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    {% endif %}
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <ul class="pagination pagination-rounded justify-content-center mt-4">
+                                        <li class="page-item disabled">
+                                            <a href="javascript: void(0);" class="page-link"><i
+                                                    class="mdi mdi-chevron-left"></i></a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="javascript: void(0);" class="page-link">1</a>
+                                        </li>
+                                        <li class="page-item active">
+                                            <a href="javascript: void(0);" class="page-link">2</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="javascript: void(0);" class="page-link">3</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="javascript: void(0);" class="page-link">4</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="javascript: void(0);" class="page-link">5</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="javascript: void(0);" class="page-link"><i
+                                                    class="mdi mdi-chevron-right"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- container-fluid -->
+    </div>
+    <!-- End Page-content -->
+
+
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <script>document.write(new Date().getFullYear())</script>
+                    © Skote.
+                </div>
+                <div class="col-sm-6">
+                    <div class="text-sm-end d-none d-sm-block">
+                        Design & Develop by Themesbrand
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+
+{% block title %} Interactive Services {% endblock %}
+
+{% block content %}
+<div class="main-content">
+
+    <div class="page-content">
+        <div class="container-fluid">
+
+            <!-- start page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                        <h4 class="mb-sm-0 font-size-18">Read Answer</h4>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <!-- end page title -->
+
+            <div class="row">
+                <div class="col-12">
+
+
+                    <!-- Right Sidebar -->
+                    <div class="email-rightbar mb-3">
+
+                        <div class="card">
+                            <div class="row mt-3 ms-2">
+                                {% if not answer_data %}
+                                <div class="col-lg-3">
+                                    <h1>No Answers Yet</h1>
+                                </div>
+                                {% endif %}
+                            </div>
+
+                            {% if answer_data %}
+                            {% for ad in answer_data %}
+                            <div class="card-body">
+                                <div class="d-flex mb-4">
+
+                                    <div class="flex-shrink-0 me-3">
+                                        <img class="rounded-circle avatar-sm" src="{{ ad.leader.leader.picture.url }}"
+                                             alt="Generic placeholder image">
+                                    </div>
+
+                                    <div class="flex-grow-1">
+                                        <h5 class="font-size-14 mt-1">{{ ad.leader.leader.full_name }}</h5>
+                                        <small class="text-muted">{{ ad.leader.leader.email }}</small>
+                                        <h5 class="font-size-14 mt-1">{{ answer }}</h5>
+                                    </div>
+                                </div>
+
+
+
+
+                                <p>
+                                    {{ ad.answer }}
+                                </p>
+
+
+                            </div>
+                            {% endfor %}
+
+                            {% endif %}
+
+
+
+                        </div>
+                    </div>
+                    <!-- card -->
+
+                </div>
+                <!-- end Col-9 -->
+
+            </div>
+
+        </div>
+        <!-- End row -->
+    </div>
+    <!-- container-fluid -->
+</div>
+{% endblock %}
