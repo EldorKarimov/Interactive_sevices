@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block title %} Interactive Services {% endblock %}
+
+{% block content %}
+<div class="main-content container">
+
+    <div class="page-content">
+        <div class="container-fluid">
+
+            <!-- start page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                        <h4 class="mb-sm-0 font-size-18">Delete Answer</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End row -->
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit">Delete</button>
+        </form>
+    </div>
+    <!-- container-fluid -->
+</div>
+{% endblock %}

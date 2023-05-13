@@ -24,6 +24,65 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
+                            <div class="table-responsive">
+                                            <table class="table table-bordered align-middle nowrap">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Full Name</th>
+                                                        <td scope="col">{{ get_send_data.user.full_name }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">Phone</th>
+                                                        <td scope="col">{{ get_send_data.phone }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">Email</th>
+                                                        <td scope="col">{{ get_send_data.email }}</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <th scope="col">Leader</th>
+                                                        <td scope="col">{{ get_send_data.leader.leader.full_name }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">Faculty</th>
+                                                        <td scope="col">{{ get_send_data.get_faculty_display }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">Direction</th>
+                                                        <td scope="col">{{ get_send_data.get_direction_display }}</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <th scope="col">Subject</th>
+                                                        <td scope="col">{{ get_send_data.subject }}</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <th scope="col">File</th>
+                                                        <td scope="col">{{ get_send_data.upload }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">Date</th>
+                                                        <td scope="col">{{ get_send_data.created_at | date }}</td>
+                                                    </tr>
+
+                                                </thead>
+                                            </table>
+
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <h4 class="card-title">Message</h4>
+                                        <div class="">
+                                            <div class="alert alert-success" role="alert">
+                                                <p>{{ get_send_data.message }}</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                        </div>
 
                             <h4 class="card-title">Basic Information</h4>
                             <p class="card-title-desc">Fill all information below</p>

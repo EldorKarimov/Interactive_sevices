@@ -25,21 +25,6 @@ class SendDataView(LoginRequiredMixin, View):
         else:
             return render(request, 'main.html', {'form':form})
 
-# class AnswersView(LoginRequiredMixin, View):
-#     def get(self, request):
-#         search_answer = request.GET.get('search_answer', '')
-#         if search_answer:
-#             try:
-#                 answer = AnswerData.objects.get(num = search_answer)
-#                 x = True
-#             except:
-#                 x = False
-#                 answer = 'No Information Found'
-#         else:
-#             answer = 'enter id to get reply'
-#             x = False
-#         return render(request, 'answer.html', {'answer':answer, 'x':x, 'search_answer':search_answer})
-
 class RequestListView(View, LoginRequiredMixin):
     def get(self, request):
         send_data = SendData.objects.all().order_by('-created_at')
@@ -75,3 +60,16 @@ class AcceptListView(LoginRequiredMixin, View):
             'answer_data':answer_data
         }
         return render(request, 'answer.html', context)
+
+
+class AnswerDeleteView(LoginRequiredMixin, View):
+    def get(self, request, **kwargs):
+        id = kwargs['id']
+        answer_data = AnswerData.objects.get(id = id)
+        return render(request, 'delete_answer.html', {'answer_data':answer_data})
+
+    def post(self, request, **kwargs):
+        id = kwargs['id']
+        answer_data = AnswerData.objects.get(id = id)
+        answer_data.delete()
+        return redirect('answers')
