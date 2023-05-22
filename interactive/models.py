@@ -2,10 +2,10 @@ from django.db import models
 from users.models import CustomUser
 import uuid
 
-
-
 class Leader(models.Model):
     leader = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
+    content = models.TextField()
+    link = models.TextField()
 
     def __str__(self):
         return self.leader.full_name

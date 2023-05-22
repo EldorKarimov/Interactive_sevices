@@ -22,190 +22,42 @@
                             <div class="row justify-content-center">
                                 <div class="col-xl-8">
                                     <div>
-                                        <div class="row align-items-center">
-                                            <div class="col-4">
-                                                <div>
-                                                    <h5 class="mb-0">Blog List</h5>
-                                                </div>
-                                            </div>
 
-
-                                        </div>
                                         <!-- end row -->
 
                                         <hr class="mb-4">
 
                                         <div class="row">
+                                            {% for leader in leaders %}
                                             <div class="col-sm-6">
                                                 <div class="card p-1 border shadow-none">
                                                     <div class="p-3">
-                                                        <h5><a href="blog-details.html" class="text-dark">Beautiful
-                                                            Day with Friends</a></h5>
-                                                        <p class="text-muted mb-0">10 Apr, 2020</p>
+                                                        <h5><a href="{{ leader.link }}" class="text-dark">{{ leader.leader.full_name }}</a></h5>
                                                     </div>
 
                                                     <div class="position-relative">
-                                                        <img src="{% static 'assets/images/small/img-2.jpg' %}" alt=""
+                                                        <img src="{{ leader.leader.picture.url }}" alt=""
                                                              class="img-thumbnail">
                                                     </div>
 
 
                                                     <div class="p-3">
-                                                        <ul class="list-inline">
-                                                            <li class="list-inline-item me-3">
-                                                                <a href="javascript: void(0);"
-                                                                   class="text-muted">
-                                                                    <i class="bx bx-purchase-tag-alt align-middle text-muted me-1"></i>
-                                                                    Project
-                                                                </a>
-                                                            </li>
-                                                            <li class="list-inline-item me-3">
-                                                                <a href="javascript: void(0);"
-                                                                   class="text-muted">
-                                                                    <i class="bx bx-comment-dots align-middle text-muted me-1"></i>
-                                                                    12 Comments
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                        <p>Neque porro quisquam est, qui dolorem ipsum quia
-                                                            dolor sit amet</p>
+
+                                                        <p>{{ leader.content |slice:":100" }}...</p>
 
                                                         <div>
-                                                            <a href="javascript: void(0);" class="text-primary">Read
+                                                            <a href="https://samduuf.uz/uz/page/branch-director-28-12-2022" class="text-primary">Read
                                                                 more <i class="mdi mdi-arrow-right"></i></a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            <div class="col-sm-6">
-                                                <div class="card p-1 border shadow-none">
-                                                    <div class="p-3">
-                                                        <h5><a href="blog-details.html" class="text-dark">Beautiful
-                                                            Day with Friends</a></h5>
-                                                        <p class="text-muted mb-0">10 Apr, 2020</p>
-                                                    </div>
-
-                                                    <div class="position-relative">
-                                                        <img src="{% static 'assets/images/small/img-2.jpg' %}" alt=""
-                                                             class="img-thumbnail">
-                                                    </div>
+                                            {% endfor %}
 
 
-                                                    <div class="p-3">
-                                                        <ul class="list-inline">
-                                                            <li class="list-inline-item me-3">
-                                                                <a href="javascript: void(0);"
-                                                                   class="text-muted">
-                                                                    <i class="bx bx-purchase-tag-alt align-middle text-muted me-1"></i>
-                                                                    Project
-                                                                </a>
-                                                            </li>
-                                                            <li class="list-inline-item me-3">
-                                                                <a href="javascript: void(0);"
-                                                                   class="text-muted">
-                                                                    <i class="bx bx-comment-dots align-middle text-muted me-1"></i>
-                                                                    12 Comments
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                        <p>Neque porro quisquam est, qui dolorem ipsum quia
-                                                            dolor sit amet</p>
-
-                                                        <div>
-                                                            <a href="javascript: void(0);" class="text-primary">Read
-                                                                more <i class="mdi mdi-arrow-right"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
 
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="card p-1 border shadow-none">
-                                                    <div class="p-3">
-                                                        <h5><a href="blog-details.html" class="text-dark">Beautiful
-                                                            Day with Friends</a></h5>
-                                                        <p class="text-muted mb-0">10 Apr, 2020</p>
-                                                    </div>
 
-                                                    <div class="position-relative">
-                                                        <img src="{% static 'assets/images/small/img-2.jpg' %}" alt=""
-                                                             class="img-thumbnail">
-                                                    </div>
-
-
-                                                    <div class="p-3">
-                                                        <ul class="list-inline">
-                                                            <li class="list-inline-item me-3">
-                                                                <a href="javascript: void(0);"
-                                                                   class="text-muted">
-                                                                    <i class="bx bx-purchase-tag-alt align-middle text-muted me-1"></i>
-                                                                    Project
-                                                                </a>
-                                                            </li>
-                                                            <li class="list-inline-item me-3">
-                                                                <a href="javascript: void(0);"
-                                                                   class="text-muted">
-                                                                    <i class="bx bx-comment-dots align-middle text-muted me-1"></i>
-                                                                    12 Comments
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                        <p>Neque porro quisquam est, qui dolorem ipsum quia
-                                                            dolor sit amet</p>
-
-                                                        <div>
-                                                            <a href="javascript: void(0);" class="text-primary">Read
-                                                                more <i class="mdi mdi-arrow-right"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-6">
-                                                <div class="card p-1 border shadow-none">
-                                                    <div class="p-3">
-                                                        <h5><a href="blog-details.html" class="text-dark">Beautiful
-                                                            Day with Friends</a></h5>
-                                                        <p class="text-muted mb-0">10 Apr, 2020</p>
-                                                    </div>
-
-                                                    <div class="position-relative">
-                                                        <img src="{% static 'assets/images/small/img-2.jpg' %}" alt=""
-                                                             class="img-thumbnail">
-                                                    </div>
-
-
-                                                    <div class="p-3">
-                                                        <ul class="list-inline">
-                                                            <li class="list-inline-item me-3">
-                                                                <a href="javascript: void(0);"
-                                                                   class="text-muted">
-                                                                    <i class="bx bx-purchase-tag-alt align-middle text-muted me-1"></i>
-                                                                    Project
-                                                                </a>
-                                                            </li>
-                                                            <li class="list-inline-item me-3">
-                                                                <a href="javascript: void(0);"
-                                                                   class="text-muted">
-                                                                    <i class="bx bx-comment-dots align-middle text-muted me-1"></i>
-                                                                    12 Comments
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                        <p>Neque porro quisquam est, qui dolorem ipsum quia
-                                                            dolor sit amet</p>
-
-                                                        <div>
-                                                            <a href="javascript: void(0);" class="text-primary">Read
-                                                                more <i class="mdi mdi-arrow-right"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
 
 
                                         <hr class="my-4">
@@ -233,7 +85,6 @@
                     <h4 class="card-title">Basic Information</h4>
                     {% for i in send_datas %}
                     {% if i.user.username == request.user.username %}
-                    <p class="card-title-desc">Your id: {{ i.num }}</p>
                     {% endif %}
                     {% endfor %}
 
@@ -308,22 +159,5 @@
         </div> <!-- container-fluid -->
     </div>
     <!-- End Page-content -->
-
-
-    <footer class="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-6">
-                    <script>document.write(new Date().getFullYear())</script>
-                    © Skote.
-                </div>
-                <div class="col-sm-6">
-                    <div class="text-sm-end d-none d-sm-block">
-                        Design & Develop by Themesbrand
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
 </div>
 {% endblock %}

@@ -1,0 +1,179 @@
+#Konfidensiallikni taminlash bu - ?
++ruxsatsiz oqishdan himoyalash.
+-ruxsatsiz yozishdan himoyalash.
+-ruxsatsiz bajarishdan himoyalash.
+-ruxsat etilgan amallarni bajarish.
+
+#Foydalanuvchanlikni taminlash bu - ?
++ruxsatsiz bajarishdan himoyalash.
+-ruxsatsiz yozishdan himoyalash.
+-ruxsatsiz oqishdan himoyalash.
+-ruxsat etilgan amallarni bajarish.
+
+#Yaxlitlikni taminlash bu - ?
++ruxsatsiz yozishdan himoyalash.
+-ruxsatsiz oqishdan himoyalash.
+-ruxsatsiz bajarishdan himoyalash.
+-ruxsat etilgan amallarni bajarish.
+
+#Jumlani toldiring. Hujumchi kabi fikrlash ... kerak.
++bolishi mumkin bolgan xavfni oldini olish uchun
+-kafolatlangan amallarni taminlash uchun
+-malumot, axborot va tizimdan foydalanish uchun
+-malumotni aniq va ishonchli ekanligini bilish uchun
+
+#Jumlani toldiring. Tizimli fikrlash ... uchun kerak.
++kafolatlangan amallarni taminlash
+-bolishi mumkin bolgan xavfni oldini olish
+-malumot, axborot va tizimdan foydalanish
+-malumotni aniq va ishonchli ekanligini bilish
+
+#Axborot xavfsizligida risk bu?
++Manbaga zarar keltiradigan ichki yoki tashqi zaiflik tasirida tahdid qilish ehtimoli.
+-U yoki bu faoliyat jarayonida nimaga erishishni xoxlashimiz.
+-Tashkilot uchun qadrli bolgan ixtiyoriy narsa.
+-Tizim yoki tashkilotga zarar yetkazishi mumkin bolgan istalmagan hodisa.
+
+#Axborot xavfsizligida tahdid bu?
++Aktivga zarar yetkazishi mumkin bolgan istalmagan hodisa.
+-Noaniqlikning maqsadlarga tasiri.
+-U yoki bu faoliyat jarayonida nimaga erishishni xohlashimiz.
+-Tashkilot uchun qadrli bolgan ixtiyoriy narsa.
+
+#Axborot xavfsizligida aktiv bu?
++Tashkilot yoki foydalanuvchi uchun qadrli bolgan ixtiyoriy narsa.
+-Tizim yoki tashkilotga zarar yetkazishi mumkin bolgan istalmagan hodisa.
+-Noaniqlikning maqsadlarga tasiri.
+-U yoki bu faoliyat jarayonida nimaga erishishni xohlashimiz.
+
+#Axborot xavfsizligida zaiflik bu?
++Tahdidga sabab boluvchi tashkilot aktivi yoki boshqaruv tizimidagi nuqson.
+-Tashkilot uchun qadrli bolgan ixtiyoriy narsa.
+-Tizim yoki tashkilotga zarar yetkazishi mumkin bolgan istalmagan hodisa.
+-Noaniqlikning maqsadlarga tasiri.
+
+#Axborot xavfsizligida boshqarish vositasi bu?
++Natijasi zaiflik yoki tahdidga tasir qiluvchi riskni ozgartiradigan harakatlar.
+-Bir yoki bir nechta tahdidga sabab boluvchi tashkilot aktivi yoki boshqaruv tizimidagi kamchilik.
+-Tashkilot uchun qadrli bolgan ixtiyoriy narsa.
+-Tizim yoki tashkilotga zarar yetkazishi mumkin bolgan istalmagan hodisa.
+
+#Har qanday vaziyatda biror bir hodisani yuzaga kelish ehtimoli qoshilsa ....
++risk paydo boladi.
+-hujum paydo boladi.
+-tahdid paydo boladi.
+-aktiv paydo boladi.
+
+#Jumlani toldiring. Denial of service (DOS) hujumi axborotni .... xususiyatini buzushga qaratilgan.
++foydalanuvchanlik
+-butunlik
+-konfidensiallik
+-ishonchlilik
+
+#Jumlani toldiring. ... sohasi tashkil etuvchilar xavfsizligi, aloqa xavfsizligi va dasturiy taminotlar xavfsizligidan iborat.
++Tizim xavfsizligi
+-Malumotlar xavfsizligi
+-Inson xavfsizligi
+-Tashkilot xavfsizligi
+
+#Kriptologiya soziga berilgan togri tavsifni toping?
++Maxfiy shifrlarni yaratish va buzish fani va sanati.
+-Maxfiy shifrlarni yaratish fani va sanati.
+-Maxfiy shifrlarni buzish fani va sanati.
+-Axborotni himoyalash fani va sanati.
+
+#.... kriptotizimni shifrlash va deshifrlash uchun sozlashda foydalaniladi.
++Kriptografik kalit
+-Ochiq matn
+-Alifbo
+-Algoritm
+
+#Kriptografiya soziga berilgan togri tavsifni toping?
++Maxfiy shifrlarni yaratish fani va sanati.
+-Maxfiy shifrlarni yaratish va buzish fani va sanati.
+-Maxfiy shifrlarni buzish fani va sanati.
+-Axborotni himoyalash fani va sanati.
+
+#Kriptotahlil soziga berilgan togri tavsifni toping?
++Maxfiy shifrlarni buzish fani va sanati.
+-Maxfiy shifrlarni yaratish fani va sanati.
+-Maxfiy shifrlarni yaratish va buzish fani va sanati.
+-Axborotni himoyalash fani va sanati.
+
+#..... axborotni ifodalash uchun foydalaniladigan chekli sondagi belgilar toplami.
++Alifbo
+-Ochiq matn
+-Shifrmatn
+-Kodlash
+
+#Malumot shifrlansa, natijasi .... boladi.
++shifrmatn
+-ochiq matn
+-nomalum
+-kod
+
+#Deshifrlash uchun kalit va ..... kerak boladi.
++shifrmatn
+-ochiq matn
+-kodlash
+-alifbo
+
+#Malumotni shifrlash va deshifrlashda yagona kalitdan foydalanuvchi tizim bu -
++simmetrik kriptotizim.
+-ochiq kalitli kriptotizim.
+-asimetrik kriptotizim.
+-xesh funksiyalar.
+
+#Ikki kalitli kriptotizim bu -
++ochiq kalitli kriptotizim.
+-simmetrik kriptotizim.
+-xesh funksiyalar.
+-MAC tizimlari.
+
+#Axborotni mavjudligini yashirish bilan shugullanuvchi fan sohasi bu -
++steganografiya.
+-kriptografiya.
+-kodlash.
+-kriptotahlil.
+
+#Axborotni foydalanuvchiga qulay tarzda taqdim etish uchun ..... amalga oshiriladi.
++kodlash
+-shifrlash
+-yashirish
+-deshifrlash
+
+#Jumlani toldiring. Malumotni konfidensialligini taminlash uchun ..... zarur.
++shifrlash
+-kodlash
+-dekodlash
+-deshifrlash
+
+#Malumotni mavjudligini yashirishda .....
++steganografik algoritmdan foydalaniladi.
+-kriptografik algoritmdan foydalaniladi.
+-kodlash algoritmidan foydalaniladi.
+-kriptotahlil algoritmidan foydalaniladi.
+
+#Xesh funksiyalar - .... funksiya.
++kalitsiz kriptografik
+-bir kalitli kriptografik
+-ikki kalitli kriptografik
+-kop kalitli kriptografik
+
+#Jumlani toldiring. Malumotni uzatishda kriptografik himoya .....
++konfidensiallik va butunlikni taminlaydi.
+-konfidensiallik va foydalanuvchanlikni taminlaydi.
+-foydalanuvchanlik va butunlikni taminlaydi.
+-konfidensiallik taminlaydi.
+
+#Jumlani toldiring. ... kompyuter davriga tegishli shifrlarga misol bola oladi.
++DES, AES shifri
+-Sezar shifri
+-Kodlar kitobi
+-Enigma shifri
+
+#.... kriptografik shifrlash algoritmlari blokli va oqimli turlarga ajratiladi.
++Simmetrik
+-Ochiq kalitli
+-Asimmetrik
+-Klassik davr

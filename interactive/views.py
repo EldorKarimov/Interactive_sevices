@@ -2,17 +2,20 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.views import View
+from django.views.generic import DeleteView
 
-from .models import SendData, AnswerData
+from .models import SendData, AnswerData, Leader
 from .forms import SendDataForm, AnswerDataForm
 
 class SendDataView(LoginRequiredMixin, View):
     def get(self, request):
         form = SendDataForm()
         send_datas = SendData.objects.all().order_by('-created_at')[:1]
+        leaders = Leader.objects.all()
         context = {
             'form':form,
-            'send_datas':send_datas
+            'send_datas':send_datas,
+            'leaders':leaders
         }
         return render(request, 'main.html', context)
     def post(self, request):
@@ -33,6 +36,7 @@ class RequestListView(View, LoginRequiredMixin):
         }
         return render(request, 'request_list.html', context)
 
+
 class RequestAnswerDetailView(LoginRequiredMixin, View):
     def get(self, request, num):
         get_send_data = SendData.objects.get(num = num)
@@ -52,6 +56,19 @@ class RequestAnswerDetailView(LoginRequiredMixin, View):
             return redirect('requests')
         else:
             return render(request, 'request_answer_detail.html', {'form':form})
+
+class RequestDeleteView(LoginRequiredMixin, View):
+    def get(self, request, num):
+        send_data = SendData.objects.get(num=num)
+        context = {
+            'send_data':send_data
+        }
+        return render(request, 'delete_request.html', context)
+
+    def post(self, request, num):
+        send_data = SendData.objects.get(num = num)
+        send_data.delete()
+        return redirect('requests')
 
 class AcceptListView(LoginRequiredMixin, View):
     def get(self, request):
